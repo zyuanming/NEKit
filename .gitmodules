@@ -1,0 +1,21 @@
+[submodule "CocoaAsyncSocket"]
+	path = CocoaAsyncSocket
+	url = git@github.com:robbiehanson/CocoaAsyncSocket.git
+[submodule "CocoaLumberjack"]
+	path = CocoaLumberjack
+	url = git@github.com:CocoaLumberjack/CocoaLumberjack.git
+[submodule "MMDB-Swift"]
+	path = MMDB-Swift
+	url = git@github.com:lexrus/MMDB-Swift.git
+[submodule "Sodium-framework"]
+	path = Sodium-framework
+	url = git@github.com:zhuhaow/Sodium-framework.git
+[submodule "YamlSwift"]
+	path = YamlSwift
+	url = git@github.com:behrang/YamlSwift.git
+[submodule "tun2socks"]
+	path = tun2socks
+	url = git@github.com:zhuhaow/tun2socks.git
+[submodule "Resolver"]
+	path = Resolver
+	url = git@github.com:zhuhaow/Resolver.git
