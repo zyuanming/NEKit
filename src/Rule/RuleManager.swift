@@ -1,4 +1,5 @@
 import Foundation
+import CocoaLumberjackSwift
 
 /// The class managing rules.
 open class RuleManager {
@@ -60,9 +61,13 @@ open class RuleManager {
      - returns: The matched configured adapter.
      */
     func match(_ session: ConnectSession) -> AdapterFactory! {
-        if session.matchedRule != nil {
-            observer?.signal(.ruleMatched(session, rule: session.matchedRule!))
-            return session.matchedRule!.match(session)
+        if let matchedRule = session.matchedRule {
+            observer?.signal(.ruleMatched(session, rule: matchedRule))
+            if let adapter = matchedRule.match(session) {
+                return adapter
+            } else {
+                DDLogError("Rule \(matchedRule) not match Adapter for session: \(session)")
+            }
         }
 
         for rule in rules {
